@@ -1,0 +1,16 @@
+{
+	"files.associations": {
+		"minishell.h": "c",
+		"complex": "c",
+		"sstream": "c",
+		"history.h": "c",
+		"__locale": "c",
+		"atomic": "c",
+		"cstdlib": "c",
+		"locale": "c",
+		"ostream": "c",
+		"typeinfo": "c",
+		"algorithm": "c",
+		"new": "c"
+	}
+}
