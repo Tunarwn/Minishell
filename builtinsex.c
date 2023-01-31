@@ -20,12 +20,10 @@ int ft_atoi(char *nbr)
 int ex_re(char *exst)
 {
 	int i = 0;
-	while(exst[i])
-	{
-		if (exst[i] == 'e' && exst[i + 1] == 'x' && exst[i + 2] == 'i' && exst[i + 3] == 't')
-			return 0;
+	while(exst[i] <= 32)
 		i++;
-	}
+	if (exst[i] == 'e' && exst[i + 1] == 'x' && exst[i + 2] == 'i' && exst[i + 3] == 't')
+		return 0;
 	return 1;
 }
 

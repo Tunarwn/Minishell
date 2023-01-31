@@ -6,14 +6,12 @@
 /*   By: tturna <tturna@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/25 21:23:38 by gsepetci          #+#    #+#             */
-/*   Updated: 2023/01/30 20:02:02 by tturna           ###   ########.fr       */
+/*   Updated: 2023/01/31 12:32:29 by tturna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MINISHELL_H
 # define MINISHELL_H
-
-# define EXIT 7
 
 # include <readline/readline.h>
 # include <readline/history.h>

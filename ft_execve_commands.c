@@ -6,7 +6,7 @@
 /*   By: tturna <tturna@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/29 10:45:50 by gsepetci          #+#    #+#             */
-/*   Updated: 2023/01/30 20:22:20 by tturna           ###   ########.fr       */
+/*   Updated: 2023/01/31 16:31:29 by tturna           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -205,6 +205,7 @@ void	ft_execve_commands(char *input, char **env)
 	i = 2;
 	pipe_len = ft_pipe_control(input);
 	n = input;
+	//printf("%s", input);
 	builtins(input);
 	i = ft_dolarnumber(input);
 	while(i > 0)
@@ -218,13 +219,13 @@ void	ft_execve_commands(char *input, char **env)
 		new_input = ft_split(n, ' ');
 		i = fork();
 		if (i == 0)
-			ft_run_commands(new_input, 0, env[2]);
+			ft_run_commands(new_input, 0, env[4]);
 		wait(NULL);
 		free(new_input);
 	}
 	else
 	{
 		temp = ft_pipe_arr(ft_pipe_control(n), n);
-		ft_pipe_function_run(temp, n, env[2]);
+		ft_pipe_function_run(temp, n, env[4]);
 	}
 }
